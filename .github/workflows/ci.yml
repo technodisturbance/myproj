@@ -15,7 +15,7 @@ jobs:
       - name: Sync deps + editable install
         run: |
           uv venv .venv
-          uv sync --all-extras || true
+          uv sync --extra dev
           uv pip install -e .
       - name: Lint
         run: uv run ruff check .
